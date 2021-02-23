@@ -1,0 +1,40 @@
+1. npm init -> creates package.json
+2. npm install express nodemon - will be included in package.json
+3. Create app.js
+4. Inside package.json replace "test" with "start":"nodemon app.js" 
+5. Looks for code comments on app.js
+6. npm install mongoose -> to access mongoose data base.
+7. npm install dotenv -> to access mongo database we need our password so this will help hide it.
+8. Create a .env file -> inside it create a var that is assigned the secret string 
+9. This .env file will be added to our gitignore so passowrd wont be visible on github.
+9. Go back to app.js then connect to mongodb look for comments on app.js.
+10. Lets make app.js cleaner by making a seperate routes directory
+11. Inside routes directory make a file for specific routes 
+12. Example make a posts.js file, fill it in and then export it
+13. Go back to app.js and import routes Look for comments
+14. On app.js we used a middleware for /posts that calls the router we exported. 
+
+    ---< Creating data to work with, to put on the database >---
+
+15. Create a folder named model.
+16. Create a file Post.json
+17. Look at comments on Post.json we create Schema inside.
+18. Go back to posts.js and import the model you want to post to.
+19. On posts.js create the router.post
+20. Open up Postman Application
+21. Do a GET request with localhost:3000/posts -> you will see it display "This is the posts page.
+22. Do a POST request, go to body and selet JSON 
+23. Create a model/object the PostSchema structure that you made.
+{
+    "title": "put title here",
+    "description": "put description here"    
+}
+24. Hit send an look at terminal you will see "undefined"
+25. We need to use package to convert req.body to a JSON
+27. On app.js import/require bodyParser 
+28. Now Do a POST request again and it wont be undefined on the terminal.
+
+
+
+
+npm install cors
